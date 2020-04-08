@@ -1,4 +1,7 @@
-# i18n-demo-second
+# Getting Started With Vue I18n (source code)
+
+Article: https://lokalise.com/blog/vue-i18n/
+Working demo: https://lokalise-vue-demo.herokuapp.com
 
 ## Project setup
 ```
