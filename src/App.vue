@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <LocaleSwitcher />
-    <p>{{ $t('main.welcome', {company: 'Lokalise'}) }}</p>
-    <p>{{ $tc('main.new_message', 10) }}</p>
-    <p>{{ $d(new Date(), 'short') }}</p>
-    <p>{{ $n(100, 'currency') }}</p>
+    <MainMenu />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import LocaleSwitcher from './components/LocaleSwitcher.vue'
+import LocaleSwitcher from '@/components/LocaleSwitcher.vue'
+import MainMenu from '@/components/MainMenu.vue'
 
 export default {
   name: 'App',
   components: {
-    LocaleSwitcher
+    LocaleSwitcher,
+    MainMenu
   }
 }
 </script>
@@ -26,6 +26,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
