@@ -1,13 +1,13 @@
 <template>
 <div id="nav">
   <router-link :to="$i18nRoute({ name: 'Home' })">
-    Home
+    {{ $t('menu.home') }}
   </router-link>
 
   <br>
 
   <router-link :to="$i18nRoute({ name: 'About' })">
-    About
+    {{ $t('menu.about') }}
   </router-link>
 </div>
 </template>

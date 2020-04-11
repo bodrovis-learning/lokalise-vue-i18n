@@ -1,4 +1,8 @@
 {
+  "menu": {
+    "home": "Home",
+    "about": "About"
+  },
   "main": {
     "welcome": "Hello from {company}!",
     "new_message": "no messages | one message | {count} messages"

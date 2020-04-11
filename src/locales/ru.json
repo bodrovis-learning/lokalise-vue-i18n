@@ -1,4 +1,8 @@
 {
+  "menu": {
+    "home": "Главная",
+    "about": "О нас"
+  },
   "main": {
     "welcome": "Вас приветствует {company}!",
     "new_message": "нет сообщений | {count} сообщение | {count} сообщения | {count} сообщений"
