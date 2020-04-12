@@ -2,10 +2,13 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import en from '@/locales/en.json'
 
+const defaultImpl = VueI18n.prototype.getChoiceIndex
+
 VueI18n.prototype.getChoiceIndex = function(choice, choicesLength) {
   // this === VueI18n instance, so the locale property also exists here
   if (this.locale !== 'ru') {
-    // empty
+    // proceed to the default implementation
+    return defaultImpl.apply(this, arguments)
   }
 
   if (choice === 0) {

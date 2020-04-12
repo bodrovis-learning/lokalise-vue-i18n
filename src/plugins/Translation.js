@@ -22,7 +22,7 @@ const Trans = {
     }
 
     if (Trans.isLocaleSupported(userPreferredLocale.localeNoISO)) {
-      return userPreferredLocale.langNoISO
+      return userPreferredLocale.localeNoISO
     }
     return Trans.defaultlocale
   },
@@ -55,7 +55,7 @@ const Trans = {
   },
   routeMiddleware(to, from, next) {
     const locale = to.params.locale
-    if (!Trans.isLocaleSupported(locale)) return next(Trans.getUserSupportedLang())
+    if (!Trans.isLocaleSupported(locale)) return next(Trans.getUserSupportedLocale())
     return Trans.changeLocale(locale).then(() => next())
   },
   i18nRoute(to) {
