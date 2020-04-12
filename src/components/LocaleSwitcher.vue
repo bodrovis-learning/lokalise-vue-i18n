@@ -1,7 +1,7 @@
 <template>
 <ul>
   <li v-for="locale in supportedLocales" :key="locale" @click="switchLocale(locale)">
-    {{locale}}
+    {{ $t('menu.' + locale) }}
   </li>
 </ul>
 </template>

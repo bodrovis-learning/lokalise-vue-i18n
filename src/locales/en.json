@@ -1,5 +1,7 @@
 {
   "menu": {
+    "en": "English",
+    "ru": "Russian",
     "home": "Home",
     "about": "About"
   },
